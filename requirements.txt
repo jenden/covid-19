@@ -1,3 +1,2 @@
-# requirements.txt
-requests~=2.23
-pandas~=1.0
+requests==2.23
+pandas==1.0
