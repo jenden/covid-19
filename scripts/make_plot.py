@@ -55,11 +55,13 @@ labels = {
     'days_since_100': 'Days Since 100 Cases',
     'confirmed': 'Confirmed Cases',
     'country': 'Country/Region',
+    'date': 'Date',
 }
 
 
 fig = px.line(x='days_since_100', y='confirmed', color='country', 
               data_frame=data.loc[data['country'].isin(top_n.index)], 
-              log_y=True, range_y=[100, y_max], labels=labels)
+              log_y=True, range_y=[100, y_max], labels=labels, 
+              hover_data=['country', 'confirmed', 'days_since_100', 'date'])
 
 plotly.offline.plot(fig, filename='figures/covid-19-cases.html')
