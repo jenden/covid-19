@@ -1,6 +1,6 @@
 # COVID-19 Confirmed Cases Visualization
 
-This project recreates the COVID-19 growth trajectory plots using publically available data compiled by [Johns Hopkins](https://github.com/CSSEGISandData).
+This project recreates the COVID-19 growth trajectory plots using publicly available data compiled by [Johns Hopkins](https://github.com/CSSEGISandData).
 
 ### Environment
 
@@ -16,4 +16,13 @@ The Center for Systems Science and Engineering at Johns Hopkins maintains daily 
 
 ```bash
 python scripts/update_data.py data/original
+```
+
+### Visualization
+
+Once the data is downloaded, run the `make_plot.py` script to create an interactive plot of the confirmed cases over time. 
+
+```bash
+mkdir figures
+python scripts/make_plot.py
 ```
